@@ -99,8 +99,10 @@ if youtube_link:
     channel_description = channel_info['channel_description']
     st.write(channel_description)
 
-else:
-    st.error("Invalid YouTube link")
+if not youtube_link:
+    st.warning("Please enter a YouTube link.")
+elif not video_id:
+    st.error("Invalid YouTube link. Please enter a valid link.")
 
 
 
